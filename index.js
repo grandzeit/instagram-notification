@@ -46,7 +46,7 @@ async function main() {
     const diff = current.media_count - last.media_count;
 
     await sendPush(
-      "Instagram Takip Değişimi",
+      "Instagram Post Değişimi",
       `${username} post sayısı ${diff > 0 ? "+" : ""}${diff} değişti.\nYeni: ${current.media_count}`
     );
   }
@@ -60,5 +60,6 @@ async function main() {
 
   saveLastData(current);
 }
+
 
 main().catch(console.error);
